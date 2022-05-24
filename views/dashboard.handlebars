@@ -1,0 +1,50 @@
+ {{!--I initially wrote out this code, but I think we need to dynamically create it using a loop. I started doing it but will pick this back up on Thursday.  --}}
+ 
+ <div>
+        <div class="header">
+            <h1>Welcome {{user.level}}, {{user.first_name}}</h1>
+        </div>
+
+        {{!-- <!-- Loop over each object in the projects array --> --}}
+        {{#each goals as |goal| }}
+        <div class="goals">
+            <div class="goal" id="goal1">
+                {{!-- this is where the the seed/plant image will go <img src=> --}}
+                <h3>{{goal}}</h3>
+               
+                <input type="checkbox" id="goal1"></input>
+                <div class="checkbox-prompt">
+                    <p>Have you done this goal today?</p>
+                </div>
+                <div class="progress-bar"> 
+                    {{!-- <!-- create progress bar with css - hide/show checkbox prompt--> --}}
+                </div>
+            </div>
+            <div class="goal" id="goal2">
+                {{!-- this is where the the seed/plant image will go <img src=> --}}
+                <h3>{{goal}}</h3>
+               
+                <input type="checkbox" id="goal2"></input>
+                <div class="checkbox-prompt">
+                    <p>Have you done this goal today?</p>
+                </div>
+                <div class="progress-bar"> 
+                    {{!-- <!-- create progress bar with css - hide/show checkbox prompt--> --}}
+                </div>
+            </div>
+            <div class="goal" id="goal3">
+                {{!-- this is where the the seed/plant image will go <img src=> --}}
+                <h3>{{goal}}</h3>
+               
+                <input type="checkbox" id="goal3"></input>
+                <div class="checkbox-prompt">
+                    <p>Have you done this goal today?</p>
+                </div>
+                <div class="progress-bar"> 
+                    {{!-- <!-- create progress bar with css - hide/show checkbox prompt--> --}}
+                </div>
+            </div>
+        </div>
+        
+        
+        </div>
