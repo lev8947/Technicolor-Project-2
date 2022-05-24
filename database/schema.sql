@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS enviroHub_db;
+CREATE DATABASE enviroHub_db;
