@@ -1,0 +1,29 @@
+h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: large;
+}
+p {
+    font-family: 'Rubik', sans-serif;
+    color: #808080;
+}
+
+.not-member {
+    color: #5BB9C3;
+}
+
+label {
+    color: grey;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    display: flex;
+    min-width: 100vw;
+}
+
+.login-page {
+    justify-content: center;
+    margin: auto;
+
+}
+
