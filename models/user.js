@@ -10,11 +10,16 @@ class User extends Model {
     
 User.init(
   {
-    name: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
+    last_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -26,12 +31,12 @@ User.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    city_name: {
+    country_name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     age: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.INTEGER,
         allowNull: false, 
     },
     level: {
@@ -51,7 +56,7 @@ User.init(
       },
     },
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
