@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviro Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviro Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<div class="flex-column justify-space-around">
+  <div>
     <header class="header">
-        <div>
-        <a href="/"><img src="images/logo.png" width=40%></a>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+      <div class="logo">
+        <a href="/"><img src="images/logo.png" width=30%></a>
+       
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="/profile">profile</a> |
+          <button class="log-in-out" id="logout">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
+         </div>
     </header>
-    <main class="container container-fluid mt-5">
+    <br>
+    <main>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
@@ -38,5 +45,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-</body>    
+</body>
+
 </html>
