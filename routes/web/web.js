@@ -6,11 +6,12 @@ router.get('/', (req,res) =>{
     // TODO check if user is logged in
     res.render('login', {
         logged_in: false,
+
     });
-})
+}),
 
 
-// GET all posts for homepage
+// // GET all posts for homepage
 // router.get('/', async (req, res) => {
 //     try {
 //         const postData = await Post.findAll({

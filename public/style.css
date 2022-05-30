@@ -1,0 +1,69 @@
+h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: large;
+}
+p {
+    font-family: 'Rubik', sans-serif;
+    color: #808080;
+}
+
+.login-text {
+    color: #5BB9C3;
+}
+
+label {
+    color: grey;
+    font-family: 'Rubik', sans-serif;
+}
+
+.login-page {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+
+.forms {
+    width: 85%;
+}
+
+.form {
+    border: 1px solid #ababab;
+    padding: 2.5%;
+}
+.form-group {
+    line-height: 1.85;
+}
+
+.header {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+width: auto;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #04AA6D;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+  }
+
+  .log-in-out {
+      background-color: #5BB9C3;
+  }
+
+  .log-in-out :active {
+      background-color: #6F913D;
+  }
