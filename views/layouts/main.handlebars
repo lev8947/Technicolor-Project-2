@@ -27,13 +27,14 @@
       {{{ body }}}
     </main>
     <footer>
-      
+      <div> <span id="display-facts"></span></div>
     </footer>
   </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
+  <script src="/facts.js"></script>
   {{/if}}
 </body>    
 </html>
