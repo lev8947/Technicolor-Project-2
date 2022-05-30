@@ -5,7 +5,8 @@ router.get('/', (req,res) =>{
 
     // TODO check if user is logged in
     res.render('login', {
-        logged_in: false
+        logged_in: false,
+
     });
 }),
 
