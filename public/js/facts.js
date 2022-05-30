@@ -1,12 +1,11 @@
 
-// button click 
-// const buttonHelpMe = document.getElementById("button-help-me-now");
+
 const displayFacts = document.getElementById("display-facts");
-// When the user clicks on the button
+
 
 
 function myFunction() {
-    console.log('b;ah');
+    
     const factsList = [
         "Kiss The Ground is an amazing doco on Netflix about improving soil health 👨‍🌾 ", 
         "As of Jan of 2022 we are at about carbon 420 ppm, we are increasing by 3ppm each year.", 
@@ -19,18 +18,11 @@ function myFunction() {
     // cycles through array and randomly selects Facts
     const randomFacts = factsList[Math.floor(Math.random()*factsList.length)];
     // Facts is displayed on screen
-    displayFacts.textContent = 'Climate Change Facts: ' + randomFacts;
+    displayFacts.textContent = 'Climate Change Facts 🌏: ' + randomFacts;
 
 };
-
-
-// document.getElementById('button-help-me-now').addEventListener('click', myFunction);
 
 window.onload = function() {            
     myFunction() 
     setInterval(myFunction, 15000);
 }
-
-// window.onload = function() {
-//     alert('accocia');
-// }

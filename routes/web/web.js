@@ -4,7 +4,7 @@ const { User, Goals } = require('../../models')
 router.get('/', (req,res) =>{
 
     // TODO check if user is logged in
-    res.render('login', {
+    res.render('map', {
         logged_in: false,
 
     });
