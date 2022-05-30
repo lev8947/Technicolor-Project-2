@@ -2,13 +2,9 @@
 will pick this back up on Thursday. --}}
 
 <div>
-    <div class="header">
+    <div class="dashboard-header">
         <h1>Welcome {{user.level}}, {{user.first_name}}</h1>
     </div>
-    
-{{!-- <div class="fun-fact">
-    <p>{{</p>
-</div> --}}
 
     {{!--
     <!-- Loop over each object in the projects array --> --}}
@@ -16,11 +12,10 @@ will pick this back up on Thursday. --}}
     <div class="goals">
         <div class="goal" id="goal">
             <h2>
-      {{!-- will need help here with doing the image but I think we need to use the below code--}}
-      <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
+                {{!-- will need help here with doing the image but I think we need to use the below code--}}
+                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
+                <a href="/project/{{project.id}}">{{project.name}}</a>
+            </h2>
             {{!-- this is where the the seed/plant image will go <img src=> --}}
             <h3>{{goal}}</h3>
 
@@ -28,14 +23,14 @@ will pick this back up on Thursday. --}}
             <div class="checkbox-prompt">
                 <p>Have you done this goal today?</p>
             </div>
-            <div class="progress-bar">
-                {{!--
-                <!-- create progress bar with css - hide/show checkbox prompt--> --}}
-            </div>
+            {{!-- <div id="myProgress">
+                <div id="myBar">10%</div>
+            </div> --}}
         </div>
     </div>
+</div>
+</div>
 {{/each}}
 
 {{!-- news section
-<div class="" --}}
-</div>
+<div class="" --}} </div>
