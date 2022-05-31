@@ -1,5 +1,5 @@
 const User = require("../../models/User");
-
+const Goals = require("../../models/goals")
 const router = require("express").Router();
 
 router.get("/login", (req, res) => {
@@ -49,4 +49,30 @@ router.post("/users/logout", (req, res)  => {
     res.status(404).end();
   }
 });
+
+router.post("/user/goals", async (req, res) => {
+    try {
+        const createdGoal = await Goals.create(
+            {
+                user_id: req.session.user_id, 
+                goal1: req.body?.goal1,
+                goal2: req.body?.goal2,
+                goal3: req.body?.goal3,
+                goal4: req.body?.goal4
+            }
+            );
+        if(!createdGoal) {
+
+        } else {
+            res.status(300).redirect('/dashboard');
+        }
+    }
+    catch
+    {
+        res.status(500).json({Error:"error"});
+    }
+} )
+
+
+
 module.exports = router;
