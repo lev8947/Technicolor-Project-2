@@ -22,7 +22,20 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.post('/api/users/signup', async (req, res) => {
+router.get('/users', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: ['country_name'],
+    });
+    const userArray = userData.map((item) => item.get({plain:true}));
+    res.status(200).json(userArray);
+  }
+  catch {
+    res.status(500).json({error:"Error Message"});
+  }
+});
+
+router.post('/users/signup', async (req, res) => {
     try {
       // create new entry in user table
       const userData = await User.create({
@@ -31,6 +44,7 @@ router.post('/api/users/signup', async (req, res) => {
         country_name: req.body.country_name,
         email: req.body.email,
         password: req.body.password,
+        age: req.body.age
       });
   
       // save user.id and set loggedIn status to true
@@ -47,20 +61,17 @@ router.post('/api/users/signup', async (req, res) => {
   
 
   router.get('/dashboard', withAuth, async (req, res) => {
-
-    const model = (await User.findByPk({
-        
-        where: {
-            // use the ID from the session
-            user_id: req.session.user_id,
-          },
+    console.log(req.session);
+    const model = (await User.findByPk(req.session.user_id,{
           include: [
             {
               model: Goals,
             },
           ],
     }))
-    const userDash = model.map((post) => post.get({ plain: true }));
+    console.log(model);
+    const modelObj = model.get({plain:true});
+    const userDash = modelObj.goals.map((post) => post.get({ plain: true }));
 
     console.log(userDash);
     res.render('dashboard', {
