@@ -60,6 +60,15 @@ router.post('/users/signup', async (req, res) => {
   });
   
 
+<<<<<<< HEAD
+
+// // GET all posts for homepage
+// router.get('/', async (req, res) => {
+//     try {
+//         const postData = await Post.findAll({
+//             include:[User],
+//         });
+=======
   router.get('/dashboard', withAuth, async (req, res) => {
     console.log(req.session);
     const model = (await User.findByPk(req.session.user_id,{
@@ -72,6 +81,7 @@ router.post('/users/signup', async (req, res) => {
     console.log(model);
     const modelObj = model.get({plain:true});
     const userDash = modelObj.goals.map((post) => post.get({ plain: true }));
+>>>>>>> f4d2acb5344357726e41d7186fa5798f37f9dae8
 
     console.log(userDash);
     res.render('dashboard', {
