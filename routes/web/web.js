@@ -10,6 +10,7 @@ router.get('/', (req,res) =>{
 }),
 
 
+
 // // GET all posts for homepage
 // router.get('/', async (req, res) => {
 //     try {

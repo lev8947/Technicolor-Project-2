@@ -9,8 +9,8 @@ will pick this back up on Thursday. --}}
     {{!--
     <!-- Loop over each object in the projects array --> --}}
     {{#each goals as |goal| }}
-    <div class="goals">
-        <div class="goal" id="goal">
+    <div class="your-goals">
+        <div class="the-goals" id="goal">
             <h2>
                 {{!-- will need help here with doing the image but I think we need to use the below code--}}
                 <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
@@ -19,18 +19,26 @@ will pick this back up on Thursday. --}}
             {{!-- this is where the the seed/plant image will go <img src=> --}}
             <h3>{{goal}}</h3>
 
-            <input type="checkbox"></input>
-            <div class="checkbox-prompt">
-                <p>Have you done this goal today?</p>
+            <div class="container">
+                <div class="goal-section">
+                    <div class="goal">
+                        <p><b>Your Goal:</b><span class="goal-name"></span>
+                        <div class="btn-wrap">
+                            <button class="btn" id="add" type="button">&checkmark;</button>
+                        </div>
+                    </div>
+                    <div class="status-info">
+                        <div class="bar-wrap">
+                            <div class="bar"> <span class="percentage"></span></div>
+                        </div>
+                        <p class="line">Number of Days Completed: <span class="number" id="num2">0</span> /<span
+                                class="number" id="num1"></span> </p>
+                    </div>
+
+
+                </div>
             </div>
-            {{!-- <div id="myProgress">
-                <div id="myBar">10%</div>
-            </div> --}}
         </div>
     </div>
 </div>
-</div>
 {{/each}}
-
-{{!-- news section
-<div class="" --}} </div>
