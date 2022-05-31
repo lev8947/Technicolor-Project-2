@@ -6,7 +6,7 @@ router.get('/', (req,res) =>{
 
     // TODO check if user is logged in
     res.render('map', {
-        logged_in: false,
+        logged_in: req.session.logged_in,
 
     });
 }),
@@ -60,33 +60,24 @@ router.post('/users/signup', async (req, res) => {
   });
   
 
-<<<<<<< HEAD
-
-// // GET all posts for homepage
-// router.get('/', async (req, res) => {
-//     try {
-//         const postData = await Post.findAll({
-//             include:[User],
-//         });
-=======
   router.get('/dashboard', withAuth, async (req, res) => {
     console.log(req.session);
     const model = (await User.findByPk(req.session.user_id,{
           include: [
             {
               model: Goals,
+              
             },
           ],
     }))
     console.log(model);
     const modelObj = model.get({plain:true});
-    const userDash = modelObj.goals.map((post) => post.get({ plain: true }));
->>>>>>> f4d2acb5344357726e41d7186fa5798f37f9dae8
+    // const userDash = modelObj.goals.map((post) => post.get({ plain: true }));
 
-    console.log(userDash);
+    console.log(modelObj);
     res.render('dashboard', {
         logged_in: req.session.logged_in,
-        userDash,
+        goals: modelObj.goals,
 
     })
 
