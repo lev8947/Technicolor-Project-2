@@ -6,10 +6,10 @@ router.get("/login", (req, res) => {
   return res.render("login");
 });
 
-router.post("/api/users/login", async (req, res) => {
+router.post("/users/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-
+    console.log(userData);
     if (!userData) {
       res.render("login", {
         error: "Invalid email or password",
@@ -18,7 +18,7 @@ router.post("/api/users/login", async (req, res) => {
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
-
+    console.log(validPassword);
     if (!validPassword) {
       res.status(400).render("login", {
         error: "Invalid email or password",
@@ -29,7 +29,7 @@ router.post("/api/users/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
+      console.log("Session");
       res.redirect('/dashboard');
       
     });
@@ -38,7 +38,7 @@ router.post("/api/users/login", async (req, res) => {
   }
 });
 
-router.post("/api/users/logout", (req, res)  => {
+router.post("/users/logout", (req, res)  => {
  
   // delete session if logging out
   if (req.session.loggedIn) {
