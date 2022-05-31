@@ -1,0 +1,44 @@
+{{!-- <div class="text-center">
+    <h2>Welcome to EnviroHub !</h2>
+<p>EnviroHubbers making a difference around the world!</p>
+</div> --}}
+<div class="users list-group">
+  {{#each users}}
+  {{!-- // href="/dashboard/edit/{{id}}" --}}
+    <a class="list-item flex-row justify-space-between">
+      <span>{{user.countryName}}</span>
+    </a>
+  {{/each}}
+</div>
+
+<div id="regions_div" class="map-image">
+    
+<script>
+    const userCountry = [
+        ['Country', 'EnviroHubbers'],
+        ['Australia', 2],
+        ['United States', 2],
+        ['France', 1],
+        ['Guatemala', 1],
+        ['East Timor', 0],
+    ];
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {
+        'packages': ['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable( userCountry );
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+    chart.draw(data, options);
+        }
+</script>
+<script src="/js/map.js"></script>
+</div>

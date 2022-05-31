@@ -7,6 +7,14 @@ p {
     color: #808080;
 }
 
+.logoImage {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.map-image {
+    margin-left: 25%;
+    margin-right: 25%;
+}
 .login-text {
     color: #5BB9C3;
 }
@@ -43,7 +51,7 @@ label {
 }
 
 .logo {
-width: auto;
+width: 100%;
 }
 
 
@@ -53,4 +61,18 @@ width: auto;
 
   .log-in-out :active {
       background-color: #6F913D;
+  }
+
+  .facts{
+      border: 1px solid #ababab;
+      padding: 2.5%;
+      width: 80%;
+      margin-top: 2em;
+      margin-left:auto;
+      margin-right: auto;
+      color: grey;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
   }
