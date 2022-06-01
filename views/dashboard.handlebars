@@ -1,6 +1,3 @@
-{{!--I initially wrote out this code, but I think we need to dynamically create it using a loop. I started doing it but
-will pick this back up on Thursday. --}}
-
 <div>
     <div class="dashboard-header">
         <h1 class="welcome">Welcome {{goal.user_id.first_name}}, {{goals.id}}</h1>
@@ -20,21 +17,14 @@ will pick this back up on Thursday. --}}
     <input class="goal-button" type="submit" value="Submit">
 </form>
 
-
-    {{!--
-    <!-- Loop over each object in the projects array --> --}}
     <div class="your-goals">
         <div class="the-goals" id="goal">
             <h2>
-                {{!-- will need help here with doing the image but I think we need to use the below code--}}
-                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-                {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-            </h2>
-            {{!-- this is where the the seed/plant image will go <img src=> --}}
+
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal:{{goal.goal1}}</b><span class="goal-name"></span>
+                        <p><b>Your Goal:{{user.goal1}}</b><span class="goal-name"></span>
                         <div class="btn-wrap">
                             <button class="btn" id="add" type="button">&checkmark;</button>
                         </div>
@@ -55,11 +45,7 @@ will pick this back up on Thursday. --}}
     <div class="your-goals">
         <div class="the-goals" id="goal">
             <h2>
-                {{!-- will need help here with doing the image but I think we need to use the below code--}}
-                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-                {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-            </h2>
-            {{!-- this is where the the seed/plant image will go <img src=> --}}
+
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
