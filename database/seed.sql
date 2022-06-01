@@ -1,8 +1,8 @@
 USE enviroHub_db
 INSERT INTO user (first_name, last_name, password, email, country_name, age)
-VALUES ("Frank", "Boon", "Frank", "frank@test.com", "Australia", 45),
-        ("Hill", "Billy", "Hill", "hill@test.com", "United States", 23),
-        ("Sally", "Tree", "Sally", "Sally@test.com", "France", 21)
+VALUES ("Frank", "Boon", "password", "frank@test.com", "Australia", 45),
+        ("Hill", "Billy", "password", "hill@test.com", "United States", 23),
+        ("Sally", "Tree", "password", "Sally@test.com", "France", 21)
 
 ;
      

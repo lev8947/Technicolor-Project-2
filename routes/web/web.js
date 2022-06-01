@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Goals } = require('../../models')
-const withAuth = require('../web/auth');
+const withAuth = require('../../Utils/auth');
 
 router.get('/', (req,res) =>{
 
@@ -47,7 +47,7 @@ router.post('/users/signup', async (req, res) => {
         age: req.body.age
       });
   
-      // save user.id and set loggedIn status to true
+      // save user.id and set  status to true
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
@@ -77,7 +77,7 @@ router.post('/users/signup', async (req, res) => {
     console.log(modelObj);
     res.render('dashboard', {
         logged_in: req.session.logged_in,
-        goals: modelObj.goals,
+        goals: modelObj.goals, User,
 
     })
 

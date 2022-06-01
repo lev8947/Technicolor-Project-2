@@ -13,12 +13,10 @@ User.init(
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     last_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
       },
     password: {
       type: DataTypes.STRING,
