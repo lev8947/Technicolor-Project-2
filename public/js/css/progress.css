@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: space-around;
     
-    width: min(90%, 800px);
+    width: min(80%, 800px);
     /* height: min(100vh, 800px); */
     margin: 0 auto;
   }

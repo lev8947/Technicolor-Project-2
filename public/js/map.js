@@ -17,6 +17,7 @@ const getCountries = () => {
         headers: {
             'Content-Type': 'application/json'
         },
+        
     })
     .then((res) => res.json())
     .then((data) => data)
@@ -25,8 +26,9 @@ const getCountries = () => {
     })
 }
 
-window.onload(getCountries());
-window.alert('blah');
+// window.onload(getCountries());
+$(window).on('load', getCountries());
+// window.alert('blah');
 // console.log({{ userCountry }})
 // const userCountry = fetch("")
 // const userCountry = [
