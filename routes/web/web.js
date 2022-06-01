@@ -3,11 +3,12 @@ const { User, Goals } = require('../../models')
 const withAuth = require('../../Utils/auth');
 
 router.get('/', (req,res) =>{
-
+console.log(User);
     // TODO check if user is logged in
     res.render('map', {
         logged_in: req.session.logged_in,
-
+        
+        
     });
 }),
 
@@ -66,20 +67,31 @@ router.post('/users/signup', async (req, res) => {
           include: [
             {
               model: Goals,
-              
+              attributes: [
+                  'goal1',
+                  'goal2',
+                  'goal3',
+                  'goal1_progress',
+                  'goal2_progress',
+                  'goal3_progress',
+              ]
             },
+
           ],
     }))
     console.log(model);
+    console.log("help");
+    console.log(User);
     const modelObj = model.get({plain:true});
-    // const userDash = modelObj.goals.map((post) => post.get({ plain: true }));
-
+    // const userDash = modelObj.goals.map((model) => model.get({ plain: true }));
+    console.log("modelObj")
     console.log(modelObj);
+ 
     res.render('dashboard', {
         logged_in: req.session.logged_in,
-        goals: modelObj.goals, User,
-
+        goals: modelObj, modelObj,Goals
+        
     })
-
+    
 });
 module.exports = router;
