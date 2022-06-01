@@ -12,7 +12,7 @@ router.post("/users/login", async (req, res) => {
     console.log(userData);
     if (!userData) {
       res.render("login", {
-        error: "Invalid email or password",
+        message: "Invalid email or password",
       });
       return;
     }
@@ -21,7 +21,7 @@ router.post("/users/login", async (req, res) => {
     console.log(validPassword);
     if (!validPassword) {
       res.status(400).render("login", {
-        error: "Invalid email or password",
+       message: "Invalid email or password",
       });
       return;
     }
@@ -41,7 +41,7 @@ router.post("/users/login", async (req, res) => {
 router.post("/users/logout", (req, res)  => {
  
   // delete session if logging out
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -55,14 +55,13 @@ router.post("/user/goals", async (req, res) => {
         const createdGoal = await Goals.create(
             {
                 user_id: req.session.user_id, 
-                goal1: req.body?.goal1,
-                goal2: req.body?.goal2,
-                goal3: req.body?.goal3,
-                goal4: req.body?.goal4
+                goal1: req.body.goal1,
+                goal2: req.body.goal2,
+                goal3: req.body.goal3,
             }
             );
         if(!createdGoal) {
-
+            console.log(createdGoal);
         } else {
             res.status(300).redirect('/dashboard');
         }

@@ -7,6 +7,31 @@ p {
     color: #808080;
 }
 
+a {
+    cursor:pointer ;
+}
+.nav-link {
+    padding:0.4em 1.2em;
+    margin:1em 0.1em 0.1em 1em;
+    border:0.5em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:450;
+    color:black;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+    width: 7rem;
+    min-width: fit-content;
+    background-color: #5BB9C3;
+    cursor: grab;
+}
+
+.nav-link:hover {
+    cursor: grab;
+}
 nav {
     margin-left: 10%;
     display: flex;
@@ -66,11 +91,32 @@ width: 100%;
 
   .log-in-out {
       background-color: #5BB9C3;
+      padding:0.4em 1.2em;
+    margin:1em 0.1em 0.1em 1em;
+    border:0.5em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:450;
+    color:black;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+    width: 7rem;
+    min-width: fit-content;
+    
   }
 
   .log-in-out :active {
       background-color: #6F913D;
+      
   }
+
+  button:hover {
+        cursor: grab;
+}
+
 
   .facts{
       border: 1px solid #ababab;
