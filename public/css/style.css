@@ -1,3 +1,6 @@
+body {
+    width: 100vw;
+}
 h2 {
     font-family: 'Balsamiq Sans', cursive;
     font-size: 1.5rem;
@@ -12,7 +15,9 @@ p {
 a {
     cursor: pointer;
 }
-
+.map-page {
+    width: 90%;
+}
 .nav-link {
     background-color: #5bb9c377;
     padding: 0.4em 1.2em;
@@ -57,10 +62,15 @@ nav {
     margin-right: 15%;
 }
 
+
+
 .map-heading {
     text-align: center;
 }
 
+rect {
+    width: 90vw;
+}
 .announcement-bar {
     background-color: #6F913D;
     color: white;
@@ -186,3 +196,15 @@ button:hover {
     font-weight: 300;
     text-align: center;
 }
+
+/* @media only screen and (max-width: 900px) {
+    .map-image {
+        margin-left: 8%;
+        margin-right: 8%;
+}}
+@media only screen and (max-width: 600px) {
+    .map-image {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+} */
