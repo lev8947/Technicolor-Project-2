@@ -53,9 +53,8 @@ nav {
 }
 
 .map-image {
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .map-heading {
@@ -97,7 +96,7 @@ label {
 }
 
 .form-group {
-    line-height: 1.85;
+padding: 0.25%;
 }
 
 .header {
