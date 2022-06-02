@@ -52,7 +52,7 @@ body {
   align-self: center;
   margin: 10px 5px 25px;
   font-family: 'Balsamiq Sans';
-  font-size: clamp(1.2rem, 3.5vw, 2.6rem);
+  font-size: 1.4rem;
   color: white;
 }
 
