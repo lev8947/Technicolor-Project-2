@@ -23,16 +23,26 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/users', async (req, res) => {
+router.get('/users/country', async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: ['country_name'],
     });
-    const userArray = userData.map((item) => item.get({plain:true}));
-    res.status(200).json(userArray);
+    const countries = userData.map((item) => item.get({ plain: true }));
+
+    const userCountry = [
+      ['Country', 'EnviroHubbers'],
+    ];
+
+    countries.forEach(ct => {
+      userCountry.push([ct.country_name, +1]);
+    });
+    console.log(userCountry)
+  
+    res.status(200).json(userCountry);
   }
   catch {
-    res.status(500).json({error:"Error Message"});
+    res.status(500).json({ error: "Error Message" });
   }
 });
 
