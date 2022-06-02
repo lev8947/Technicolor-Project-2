@@ -39,7 +39,7 @@ User.init(
     },
     level: {
         type: DataTypes.INTEGER,
-        defaultValue: '0',
+        defaultValue: '1',
     },
   },
   {
