@@ -47,7 +47,7 @@ nav {
     display: flex;
     flex: auto;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     font-size: 2rem;
     text-decoration: none;
 }
