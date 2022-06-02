@@ -22,10 +22,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: min(80%, 800px);
-  /* height: min(100vh, 800px); */
+  width: min(90%, 800px);
   margin: 0 auto;
 }
+
 
 .status-info {
   display: flex;
@@ -35,14 +35,18 @@ body {
 .bar-wrap {
   padding: 6px;
   margin-top: 50px;
+  
   border-radius: 100px;
+  
   background-color: var(--bar-wrap-back-color);
 }
 
 .bar {
   width: 0%;
   height: 15px;
+  
   transition: width .15s ease-out;
+  
   background-color: var(--bar-color);
   border-radius: 100px;
   box-shadow: inset -1px -1px 10px white;
@@ -50,20 +54,26 @@ body {
 
 .percentage {
   align-self: center;
-  margin: 10px 5px 25px;
+  
+  margin: 10px 10px 25px;
+  
   font-family: 'Balsamiq Sans';
-  font-size: 1.4rem;
+  font-size: 1.3em;
+  
   color: white;
 }
 
 .line {
-  margin: 0;
+  margin: 5px;
+  
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  
   color: var(--text-color);
 }
 
 .number {
   margin-left: 8px;
+  
   font-family: 'Balsamiq Sans', cursive;
   font-size: clamp(1.8rem, 3vw, 2.2rem);
 }
@@ -76,17 +86,16 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  width: min(15vw, 70px);
-  height: min(15vw, 70px);
+  
+  width: min(15vw, 60px);
+  height: min(15vw, 60px);
   border: 3px solid #5BB9C3;
-  margin: 1rem;
-
+  
   font-family: 'Balsamiq Sans', cursive;
-  font-size: 4.8rem;
-
+  font-size: 3rem;
+  
   transition: background .15s, color .15s;
-
+  
   border-radius: 50%;
   background-color: #5BB9C3;
   color: var(--body-color);
@@ -95,4 +104,14 @@ body {
 .btn:active {
   background-color: #6F913D;
   color: var(--body-color);
+}
+
+.goal-section {
+  display: flex;
+}
+
+.goal {
+  font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+
 }
