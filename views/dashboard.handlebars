@@ -6,7 +6,7 @@ will pick this back up on Thursday. --}}
         <h1 class="welcome">Welcome {{modelObj.first_name}}, Level {{modelObj.level}}.... How is {{modelObj.country_name}} this time of year?</h1>
     </div>
 
-{{#unless goals}}
+{{#unless modelObj.goals}}
 <form class="goal-form" action="/api/user/goals" method="post">
     <h2>Choose your Goals</h2>
   <input type="checkbox" id="goal1" name="goal1" value="Used a keep cup">
@@ -15,15 +15,14 @@ will pick this back up on Thursday. --}}
   <label for="goal2"> Walked or cycled instead of driving</label><br>
   <input type="checkbox" id="goal3" name="goal3" value="Bring your own bags when shopping">
   <label for="goal3"> Bring your own bags when shopping</label><br><br>
-   <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
-  <label for="goal4"> Bought plastic free fruit and veg</label><br>
+   {{!-- <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
+  <label for="goal4"> Bought plastic free fruit and veg</label><br> --}}
     <input class="goal-button" type="submit" value="Submit">
 </form>
 {{/unless}}
 
-{{#if goals}}
-{{#with modelObj}}
-    {{#with goals}}
+{{#if modelObj.goals}}
+
     {{!--
     <!-- Loop over each object in the projects array --> --}}
     <div class="your-goals">
@@ -37,7 +36,7 @@ will pick this back up on Thursday. --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal:{{goals.goal1:}}</b><span class="goal-name"></span>
+                        <p><b>Your Goal:{{goal1:}}</b><span class="goal-name"></span>
                         <div class="btn-wrap">
                             <button class="btn" id="add" type="button">&checkmark;</button>
                         </div>
@@ -53,8 +52,6 @@ will pick this back up on Thursday. --}}
             </div>
         </div>
     </div>
-        {{/with}}
-    {{/with}}
     <div class="your-goals">
         <div class="the-goals" id="goal">
             <h2>
