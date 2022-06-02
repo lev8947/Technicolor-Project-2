@@ -1,5 +1,5 @@
-const User = require("../../models/User");
-const Goals = require("../../models/goals");
+const User = require("/../../models/User");
+const Goals = require("/../../models/goals");
 const withAuth = require("../../Utils/auth");
 const { response } = require("express");
 const router = require("express").Router();
@@ -81,7 +81,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       user_id: req.session.user_id
     }
   }).then((goals) => {
-    return res.json(goals)
+    return res.json(goals);
   });
 });
 
@@ -95,7 +95,7 @@ router.put('/dashboard/:id', async (req, res) => {
   }
   ).then((goals) => {
     // console.log(res.json(goals))
-    return res.json(goals)
+    return res.json(goals);
   });
 });
 
@@ -108,7 +108,7 @@ router.get('/dashboard/:id', async (req, res) => {
   }
   ).then((goals) => {
     // console.log(res.json(goals))
-    return res.json(goals)
+    return res.json(goals);
   });
 });
 

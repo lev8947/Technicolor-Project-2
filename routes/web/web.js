@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { User, Goals } = require('../../models')
-const withAuth = require('../../Utils/auth');
+const { User, Goals } = require('/../../models')
+const withAuth = require('/../../Utils/auth');
 
 router.get('/', (req,res) =>{
 console.log(User);
@@ -36,7 +36,6 @@ router.get('/users/country', async (req, res) => {
     countries.forEach(ct => {
       userCountry.push([ct.country_name, +1]);
     });
-    console.log(userCountry)
   
     res.status(200).json(userCountry);
   }
@@ -71,7 +70,7 @@ router.post('/users/signup', async (req, res) => {
   
 
   router.get('/dashboard', withAuth, async (req, res) => {
-    console.log(req.session);
+    
     const model = (await User.findByPk(req.session.user_id,{
           include: [
             {
@@ -88,15 +87,9 @@ router.post('/users/signup', async (req, res) => {
 
           ],
     }))
-    console.log(model);
-    console.log(User);
     const modelObj = model.get({plain:true});
     // const userDash = modelObj.goals.map((model) => model.get({ plain: true }));
-    console.log("modelObj");
-    console.log(modelObj);
-   
- 
-    res.render('dashboard', {
+       res.render('dashboard', {
         logged_in: req.session.logged_in,
         goals: modelObj, modelObj,Goals
         
