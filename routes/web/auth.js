@@ -1,5 +1,5 @@
-const User = require("/../../models/User");
-const Goals = require("/../../models/goals");
+const User = require("../../models/User");
+const Goals = require("../../models/goals");
 const withAuth = require("../../Utils/auth");
 const { response } = require("express");
 const router = require("express").Router();
