@@ -3,50 +3,49 @@ will pick this back up on Thursday. --}}
 
 <div>
     <div class="dashboard-header">
-        <h1 class="welcome">Welcome {{modelObj.first_name}}, Level {{modelObj.level}}.... How is {{modelObj.country_name}} this time of year?</h1>
+        <h1 class="welcome">Welcome {{modelObj.first_name}}, Level {{modelObj.level}}.... How is
+            {{modelObj.country_name}} this time of year?</h1>
     </div>
 
-{{#unless modelObj.goals}}
-<form class="goal-form" action="/api/user/goals" method="post">
-    <h2>Choose your Goals</h2>
-  <input type="checkbox" id="goal1" name="goal1" value="Used a keep cup">
-  <label for="goal1"> Used a keep cup</label><br>
-  <input type="checkbox" id="goal2" name="goal2" value="Walked or cycled instead of driving">
-  <label for="goal2"> Walked or cycled instead of driving</label><br>
-  <input type="checkbox" id="goal3" name="goal3" value="Bring your own bags when shopping">
-  <label for="goal3"> Bring your own bags when shopping</label><br><br>
-   {{!-- <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
-  <label for="goal4"> Bought plastic free fruit and veg</label><br> --}}
-    <input class="goal-button" type="submit" value="Submit">
-</form>
-{{/unless}}
+    {{#unless modelObj.goals}}
+    <form class="goal-form" action="/api/user/goals" method="post">
+        <h2>Choose your Goals</h2>
 
-{{#if modelObj.goals}}
+        <input type="checkbox" id="goal1" name="goal1" value="Used a keep cup">
+        <label for="goal1"> Used a keep cup</label><br>
 
-    {{!--
-    <!-- Loop over each object in the projects array --> --}}
+        <input type="checkbox" id="goal2" name="goal2" value="Walked or cycled instead of driving">
+        <label for="goal2"> Walked or cycled instead of driving</label><br>
+
+        <input type="checkbox" id="goal3" name="goal3" value="Bring your own bags when shopping">
+        <label for="goal3"> Bring your own bags when shopping</label><br><br>
+
+        {{!-- <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
+        <label for="goal4"> Bought plastic free fruit and veg</label><br> --}}
+
+        <input class="goal-button" type="submit" value="Submit">
+    </form>
+    {{/unless}}
+
+    {{#if modelObj.goals}}
+
     <div class="your-goals">
         <div class="the-goals" id="goal">
-            <h2>
-                {{!-- will need help here with doing the image but I think we need to use the below code--}}
-                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-                {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-            </h2>
-            {{!-- this is where the the seed/plant image will go <img src=> --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal: {{modelObj.goals.0.goal1}}</b><span class="goal-name"></span>
+                        <h2><b>Your Goal: {{modelObj.goals.0.goal1}}</b><span class="goal-name"></span></h2>
                         <div class="btn-wrap">
-                            <button class="btn" id="add" type="button">&checkmark;</button>
+                            <button class="btn" id="add1" type="button">&checkmark;</button>
                         </div>
                     </div>
                     <div class="status-info">
                         <div class="bar-wrap">
-                            <div class="bar"> <span class="percentage"></span></div>
+                            <div class="bar" id="bar1"> <span class="percentage" id="percentage1"></span></div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span
-                                class="number" id="num1"></span> </p>
+                        <p class="line">Number of Days Completed: <span class="number"
+                                id="goal1Input">{{modelObj.goals.0.goal1_progress}}</span> /<span class="number"
+                                id="total1"></span> </p>
                     </div>
                 </div>
             </div>
@@ -54,60 +53,54 @@ will pick this back up on Thursday. --}}
     </div>
     <div class="your-goals">
         <div class="the-goals" id="goal">
-            <h2>
-                {{!-- will need help here with doing the image but I think we need to use the below code--}}
-                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-                {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-            </h2>
-            {{!-- this is where the the seed/plant image will go <img src=> --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal: {{modelObj.goals.0.goal2}}</b><span class="goal-name"></span>
+                        <h2><b>Your Goal: {{modelObj.goals.0.goal2}}</b><span class="goal-name"></span></h2>
                         <div class="btn-wrap">
-                        <button class="btn" id="add" type="button">&checkmark;</button>
+                            <button class="btn" id="add2" type="button">&checkmark;</button>
                         </div>
                     </div>
                     <div class="status-info">
                         <div class="bar-wrap">
-                            <div class="bar"> <span class="percentage"></span></div>
+                            <div class="bar" id="bar2"> <span class="percentage" id="percentage2"></span></div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span class="number" id="num1"></span> </p>
+                        <p class="line">Number of Days Completed: <span class="number"
+                                id="goal2Input">{{modelObj.goals.0.goal2_progress}}</span> /<span class="number"
+                                id="total2"></span> </p>
                     </div>
-                       </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="your-goals">
         <div class="the-goals" id="goal">
-            <h2>
-                {{!-- will need help here with doing the image but I think we need to use the below code--}}
-                <!-- Call helper function with triple brackets to render the seed/ span as HTML -->
-                {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-            </h2>
-            {{!-- this is where the the seed/plant image will go <img src=> --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal: {{modelObj.goals.0.goal3}}</b><span class="goal-name"></span>
+                        <h2><b>Your Goal: {{modelObj.goals.0.goal3}}</b><span class="goal-name"></span></h2>
                         <div class="btn-wrap">
-                            <button class="btn" id="add" type="button">&checkmark;</button>
+                            <button class="btn" id="add3" type="button">&checkmark;</button>
                         </div>
                     </div>
                     <div class="status-info">
                         <div class="bar-wrap">
-                            <div class="bar"> <span class="percentage"></span>
-                            </div>
+                            <div class="bar" id="bar3"> <span class="percentage" id="percentage3"></span></div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span
-                                class="number" id="num1"></span> </p>
+                        <p class="line">Number of Days Completed: <span class="number"
+                                id="goal3Input">{{modelObj.goals.0.goal3_progress}}</span> /<span class="number"
+                                id="total3"></span> </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
+    
+
 </div>
 
 {{/if}}
 
+<script src="js/dashboard.js"></script>
+<script src="js/progress.js"></script>

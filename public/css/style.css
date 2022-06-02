@@ -2,26 +2,28 @@ h2 {
     font-family: 'Balsamiq Sans', cursive;
     font-size: large;
 }
+
 p {
     font-family: 'Rubik', sans-serif;
     color: #808080;
 }
 
 a {
-    cursor:pointer ;
+    cursor: pointer;
 }
+
 .nav-link {
-    padding:0.4em 1.2em;
-    margin:1em 0.1em 0.1em 1em;
-    border:0.5em solid rgba(255,255,255,0);
-    border-radius:2em;
+    padding: 0.4em 1.2em;
+    margin: 1em 0.1em 0.1em 1em;
+    border: 0.5em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
     box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:450;
-    color:black;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    text-align:center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 450;
+    color: black;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
     transition: all 0.2s;
     width: 7rem;
     min-width: fit-content;
@@ -32,6 +34,7 @@ a {
 .nav-link:hover {
     cursor: grab;
 }
+
 nav {
     margin-left: 10%;
     display: flex;
@@ -41,14 +44,17 @@ nav {
     font-size: 2rem;
     text-decoration: none;
 }
+
 .logoImage {
     margin-left: 35%;
     margin-right: 35%;
 }
+
 .map-image {
     margin-left: 25%;
     margin-right: 25%;
 }
+
 .login-text {
     color: #5BB9C3;
 }
@@ -73,6 +79,7 @@ label {
     border: 1px solid #ababab;
     padding: 2.5%;
 }
+
 .form-group {
     line-height: 1.85;
 }
@@ -85,78 +92,78 @@ label {
 }
 
 .logo {
-width: 100%;
+    width: 100%;
 }
 
 
-  .log-in-out {
-      background-color: #5BB9C3;
-      padding:0.4em 1.2em;
-    margin:1em 0.1em 0.1em 1em;
-    border:0.5em solid rgba(255,255,255,0);
-    border-radius:2em;
+.log-in-out {
+    background-color: #5BB9C3;
+    padding: 0.4em 1.2em;
+    margin: 1em 0.1em 0.1em 1em;
+    border: 0.5em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
     box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:450;
-    color:black;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    text-align:center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 450;
+    color: black;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
     transition: all 0.2s;
     width: 7rem;
     min-width: fit-content;
-    
-  }
 
-  .log-in-out :active {
-      background-color: #6F913D;
-      
-  }
+}
 
-  button:hover {
-        cursor: grab;
+.log-in-out :active {
+    background-color: #6F913D;
+
+}
+
+button:hover {
+    cursor: grab;
 }
 
 
-  .facts{
-      border: 1px solid #ababab;
-      padding: 2.5%;
-      width: 80%;
-      margin-top: 2em;
-      margin-left:auto;
-      margin-right: auto;
-      color: grey;
+.facts {
+    border: 1px solid #ababab;
+    padding: 2.5%;
+    width: 80%;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    color: grey;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 1rem;
 
-  }
+}
 
-  /* Dashboard style */
-  .goal-form {
+/* Dashboard style */
+.goal-form {
     width: 85%;
     border: 1px solid #ababab;
     padding: 2.5%;
     margin: auto;
-  }
+}
 
-  .goal-button {
-    display:inline-block;
-    padding:0.4em 1.2em;
-    margin:1em 0.1em 0.1em 1em;
-    border:0.16em solid rgba(255,255,255,0);
-    border-radius:2em;
+.goal-button {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    margin: 1em 0.1em 0.1em 1em;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
     box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:450;
-    color:black;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    text-align:center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 450;
+    color: black;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
     transition: all 0.2s;
     width: 7rem;
     min-width: fit-content;
-  }
+}
 
 .welcome {
     margin-left: 10%;

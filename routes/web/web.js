@@ -90,12 +90,12 @@ router.post('/users/signup', async (req, res) => {
           ],
     }))
     console.log(model);
-    console.log("help");
     console.log(User);
     const modelObj = model.get({plain:true});
     // const userDash = modelObj.goals.map((model) => model.get({ plain: true }));
-    console.log("modelObj")
+    console.log("modelObj");
     console.log(modelObj);
+   
  
     res.render('dashboard', {
         logged_in: req.session.logged_in,
