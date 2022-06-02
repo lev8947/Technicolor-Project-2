@@ -4,7 +4,6 @@ const withAuth = require('../../Utils/auth');
 
 router.get('/', (req,res) =>{
 console.log(User);
-    // TODO check if user is logged in
     res.render('map', {
         logged_in: req.session.logged_in,
         

@@ -1,11 +1,14 @@
 h2 {
     font-family: 'Balsamiq Sans', cursive;
     font-size: large;
+    font-size: 1.5rem;
+
 }
 
 p {
     font-family: 'Rubik', sans-serif;
     color: #808080;
+    font-size: 1.5rem;
 }
 
 a {
@@ -63,6 +66,7 @@ nav {
 label {
     color: grey;
     font-family: 'Rubik', sans-serif;
+    font-size: 1.4rem;
 }
 
 .login-page {
@@ -97,7 +101,6 @@ label {
     width: 100%;
 }
 
-
 .log-in-out {
     background-color: #5BB9C3;
     padding: 0.4em 1.2em;
@@ -128,7 +131,6 @@ button:hover {
 
 
 .facts {
-    border: 1px solid #ababab;
     padding: 2.5%;
     width: 85%;
     margin-top: 2em;
@@ -139,7 +141,7 @@ button:hover {
     font-weight: 400;
     font-size: 1.75rem;
     background-color: #5bb9c3a5;
-
+    border-radius: 5px;
 }
 
 /* Dashboard style */
@@ -148,6 +150,7 @@ button:hover {
     border: 1px solid #ababab;
     padding: 2.5%;
     margin: auto;
+    border-radius: 5px;
 }
 
 .goal-button {

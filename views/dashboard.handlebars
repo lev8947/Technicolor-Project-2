@@ -1,6 +1,3 @@
-{{!--I initially wrote out this code, but I think we need to dynamically create it using a loop. I started doing it but
-will pick this back up on Thursday. --}}
-
 <div>
     <div class="dashboard-header">
         <h1 class="welcome">Welcome {{modelObj.first_name}}. </h1> <h1 class="non-bold">You are on Level {{modelObj.level}} </h1>
@@ -10,19 +7,22 @@ will pick this back up on Thursday. --}}
 
     {{#unless modelObj.goals}}
     <form class="goal-form" action="/api/user/goals" method="post">
-        <h2>Choose your Goals</h2>
+        <h2>Choose Your Goals For This Month</h2> <p>*You must select 3 goals to proceed.</p>
 
         <input type="checkbox" id="goal1" name="goal1" value="Used a keep cup">
-        <label for="goal1"> Used a keep cup</label><br>
+        <label for="goal1"> Used a keep cup instead of takeaway coffee cup</label><br>
 
         <input type="checkbox" id="goal2" name="goal2" value="Walked or cycled instead of driving">
         <label for="goal2"> Walked or cycled instead of driving</label><br>
 
         <input type="checkbox" id="goal3" name="goal3" value="Bring your own bags when shopping">
-        <label for="goal3"> Bring your own bags when shopping</label><br><br>
+        <label for="goal3"> Brought own bags when shopping</label><br>
 
-        {{!-- <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
-        <label for="goal4"> Bought plastic free fruit and veg</label><br> --}}
+        <input type="checkbox" id="goal4" name="goal4" value="Bought plastic free fruit and veg">
+        <label for="goal4"> Refused plastic straw or plastic cutlery</label><br>
+
+        <input type="checkbox" id="goal5" name="goal5" value="Bought plastic free fruit and veg">
+        <label for="goal5"> Used reusable food storage option, instead of cling wrap or plastic containers</label><br>
 
         <input class="goal-button" type="submit" value="Submit">
     </form>
