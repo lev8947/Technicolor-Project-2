@@ -3,8 +3,9 @@ will pick this back up on Thursday. --}}
 
 <div>
     <div class="dashboard-header">
-        <h1 class="welcome">Welcome {{modelObj.first_name}}, Level {{modelObj.level}}.... How is
-            {{modelObj.country_name}} this time of year?</h1>
+        <h1 class="welcome">Welcome {{modelObj.first_name}}. </h1> <h1 class="non-bold">You are on Level {{modelObj.level}} </h1>
+        <h1 style="color:#5BB9C3"; class="non-bold"><i>How is
+            {{modelObj.country_name}} this time of year?</h1></i>
     </div>
 
     {{#unless modelObj.goals}}
@@ -95,8 +96,8 @@ will pick this back up on Thursday. --}}
             </div>
         </div>
     </div>
-    
-    
+
+
 
 </div>
 
