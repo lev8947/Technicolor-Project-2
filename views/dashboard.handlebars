@@ -36,7 +36,7 @@ will pick this back up on Thursday. --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal:{{goal1:}}</b><span class="goal-name"></span>
+                        <p><b>Your Goal: {{modelObj.goals.0.goal1}}</b><span class="goal-name"></span>
                         <div class="btn-wrap">
                             <button class="btn" id="add" type="button">&checkmark;</button>
                         </div>
@@ -45,7 +45,7 @@ will pick this back up on Thursday. --}}
                         <div class="bar-wrap">
                             <div class="bar"> <span class="percentage"></span></div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">0</span> /<span
+                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span
                                 class="number" id="num1"></span> </p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ will pick this back up on Thursday. --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal:{{modelObj.goals.0.text}}</b><span class="goal-name"></span>
+                        <p><b>Your Goal: {{modelObj.goals.0.goal2}}</b><span class="goal-name"></span>
                         <div class="btn-wrap">
                         <button class="btn" id="add" type="button">&checkmark;</button>
                         </div>
@@ -72,7 +72,7 @@ will pick this back up on Thursday. --}}
                         <div class="bar-wrap">
                             <div class="bar"> <span class="percentage"></span></div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">0</span> /<span class="number" id="num1"></span> </p>
+                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span class="number" id="num1"></span> </p>
                     </div>
                        </div>
             </div>
@@ -89,7 +89,7 @@ will pick this back up on Thursday. --}}
             <div class="container">
                 <div class="goal-section">
                     <div class="goal">
-                        <p><b>Your Goal:{{goal.goal3}}</b><span class="goal-name"></span>
+                        <p><b>Your Goal: {{modelObj.goals.0.goal3}}</b><span class="goal-name"></span>
                         <div class="btn-wrap">
                             <button class="btn" id="add" type="button">&checkmark;</button>
                         </div>
@@ -99,7 +99,7 @@ will pick this back up on Thursday. --}}
                             <div class="bar"> <span class="percentage"></span>
                             </div>
                         </div>
-                        <p class="line">Number of Days Completed: <span class="number" id="num2">0</span> /<span
+                        <p class="line">Number of Days Completed: <span class="number" id="num2">{{modelObj.goals.0.goal1_progress}}</span> /<span
                                 class="number" id="num1"></span> </p>
                     </div>
                 </div>
