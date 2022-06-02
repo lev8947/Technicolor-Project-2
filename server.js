@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const router = require('./routes/index');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+const multiavatar = require('./public/js/multiavatar');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
