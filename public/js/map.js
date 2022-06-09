@@ -23,4 +23,6 @@ const getCountries = () => {
     })
 }
 
-$(window).on('load', getCountries());
+// $(window).on('load', getCountries());
+window.onload = getCountries();            
+  
