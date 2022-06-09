@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const User = require("../../models/frank");
 const Goals = require("../../models/goals");
 const withAuth = require("../../utils/auth");
 const { response } = require("express");
