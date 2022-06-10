@@ -3,7 +3,7 @@ const getCountries = () => {
         return res.json()
     })
     .then((myJSON) => {
-        console.log(myJSON)
+        // console.log(myJSON)
         const userCountry = myJSON
         
         google.charts.load('current', {

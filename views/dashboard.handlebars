@@ -1,64 +1,100 @@
 <div>
     <div class="dashboard-header">
-        <h1 class="welcome">Welcome {{modelObj.first_name}}. </h1> <h1 class="non-bold">You are a Level {{modelObj.level}} Enviro_Warrior </h1>
-        <h1 style="color:#5BB9C3"; class="non-bold"><i>How is
-            {{modelObj.country_name}} this time of year?</h1></i>
+        <h1 class="welcome">Welcome {{modelObj.first_name}}. </h1>
+        <h1 class="non-bold">You are a Level {{modelObj.level}} Enviro_Warrior </h1>
+        <h1 style="color:#5BB9C3" ; class="non-bold"><i>How is
+                {{modelObj.country_name}} this time of year?</h1></i>
     </div>
 
     {{!-- avatar --}}
     <div class="centered">
-      
-      <div style="height:40px;"></div>
 
-      <div class="heading" id="heading">
-        <a href="https://multiavatar.com" class="link-back" target="_blank" style="text-decoration:none;color:#111;">EnviroHub</a>
-      </div>
-      <div style="height:5px;"></div>
-      Choose your Habiteer!
+        <div style="height:40px;"></div>
 
-      <div style="height:60px;"></div>
-
-      <a class="identicon-link" id="identicon-link" target="_blank">
-        <div id="identicon">
-          <div class="ma-spinner"><div></div><div></div></div>
+        <div class="heading" id="heading">
+            <a href="https://multiavatar.com" class="link-back" target="_blank"
+                style="text-decoration:none;color:#111;">EnviroHub</a>
         </div>
-      </a>
+        <div style="height:5px;"></div>
+        Choose your Habiteer!
 
-      <div style="height:40px;"></div>
+        <div style="height:60px;"></div>
 
-      <div style="max-width:240px;margin: 0 auto;">
-        <input type="text" oninput="getNewIdenticon(this.value)" onfocus="stopDemoNow()" id="identicon-input" class="mono">
-      </div>
+        <a class="identicon-link" id="identicon-link" target="_blank">
+            <div id="identicon">
+                <div class="ma-spinner">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </a>
 
-      <div style="height:20px;"></div>
+        <div style="height:40px;"></div>
 
-      <div class="noselect">
-        <div class="buttons">
-          <div style="cursor:pointer;" onclick="newIdenticon()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><title>New (N)</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" /><path d="M43.11,43.11A18.56,18.56,0,0,0,31.89,11.55a1.45,1.45,0,0,0-1.12.37A1.39,1.39,0,0,0,30.3,13v.17a1.44,1.44,0,0,0,1.29,1.43A15.5,15.5,0,0,1,41,41l-.35.35a.6.6,0,0,1-.85,0l-3.23-3.23a.6.6,0,0,0-1,.42V48a.6.6,0,0,0,.6.6h9.47a.58.58,0,0,0,.55-.37.57.57,0,0,0-.13-.65L42.76,44.3a.6.6,0,0,1,0-.84l.35-.35ZM14.51,30A15.44,15.44,0,0,1,19,19l.35-.34a.58.58,0,0,1,.84,0l3.24,3.23a.6.6,0,0,0,1-.42V12a.6.6,0,0,0-.6-.6H14.42a.58.58,0,0,0-.55.37.57.57,0,0,0,.13.65l3.24,3.24a.6.6,0,0,1,0,.84l-.35.35A18.55,18.55,0,0,0,28.11,48.45,1.46,1.46,0,0,0,29.7,47v-.16a1.44,1.44,0,0,0-1.29-1.44A15.51,15.51,0,0,1,14.51,30Z" style="fill:#fff;pointer-events: none;"/></g></g></svg>
-          </div>
+        <div style="max-width:240px;margin: 0 auto;">
+            <input type="text" oninput="getNewIdenticon(this.value)" onfocus="stopDemoNow()" id="identicon-input"
+                class="mono">
         </div>
 
-        <div class="buttons">
-          <a class="identicon-link" target="_blank" title="Open">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><title>Link</title><path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" /><path d="M46.08,13.93a4.08,4.08,0,0,0-2.86-1.19H34.38A1.36,1.36,0,0,0,33,14.09h0a1.34,1.34,0,0,0,1.33,1.35h8.21l-2,2h0l-1.24,1.23h0L27.69,30.35a1.35,1.35,0,0,0,1.9,1.91l11.57-11.6,3.21-3.2h0l.19-.18-.07,8.26a1.35,1.35,0,1,0,2.7,0l.07-8.74h0A4,4,0,0,0,46.08,13.93Z" style="fill:#fff;fill-rule:evenodd"/><path d="M38.46,31.23a1.26,1.26,0,0,0-1.26,1.26h0v11a1.34,1.34,0,0,1-.38.91h0a1.24,1.24,0,0,1-.85.34H16.54a1.34,1.34,0,0,1-.91-.38,1.29,1.29,0,0,1-.37-.91V24.07a1.29,1.29,0,0,1,.37-.91h0a1.33,1.33,0,0,1,.91-.37h10.9a1.26,1.26,0,0,0,0-2.52H16.54a3.78,3.78,0,0,0-2.69,1.16h0a3.78,3.78,0,0,0-1.11,2.68V43.45a3.8,3.8,0,0,0,3.8,3.8H36a3.74,3.74,0,0,0,2.6-1l.08-.08a3.77,3.77,0,0,0,1.12-2.68v-11a1.27,1.27,0,0,0-1.26-1.26Z" style="fill:#fff;fill-rule:evenodd"/></svg>
-          </a>
+        <div style="height:20px;"></div>
+
+        <div class="noselect">
+            <div class="buttons">
+                <div style="cursor:pointer;" onclick="newIdenticon()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                        <title>New (N)</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" />
+                                <path
+                                    d="M43.11,43.11A18.56,18.56,0,0,0,31.89,11.55a1.45,1.45,0,0,0-1.12.37A1.39,1.39,0,0,0,30.3,13v.17a1.44,1.44,0,0,0,1.29,1.43A15.5,15.5,0,0,1,41,41l-.35.35a.6.6,0,0,1-.85,0l-3.23-3.23a.6.6,0,0,0-1,.42V48a.6.6,0,0,0,.6.6h9.47a.58.58,0,0,0,.55-.37.57.57,0,0,0-.13-.65L42.76,44.3a.6.6,0,0,1,0-.84l.35-.35ZM14.51,30A15.44,15.44,0,0,1,19,19l.35-.34a.58.58,0,0,1,.84,0l3.24,3.23a.6.6,0,0,0,1-.42V12a.6.6,0,0,0-.6-.6H14.42a.58.58,0,0,0-.55.37.57.57,0,0,0,.13.65l3.24,3.24a.6.6,0,0,1,0,.84l-.35.35A18.55,18.55,0,0,0,28.11,48.45,1.46,1.46,0,0,0,29.7,47v-.16a1.44,1.44,0,0,0-1.29-1.44A15.51,15.51,0,0,1,14.51,30Z"
+                                    style="fill:#fff;pointer-events: none;" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <a class="identicon-link" target="_blank" title="Open">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                        <title>Link</title>
+                        <path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" />
+                        <path
+                            d="M46.08,13.93a4.08,4.08,0,0,0-2.86-1.19H34.38A1.36,1.36,0,0,0,33,14.09h0a1.34,1.34,0,0,0,1.33,1.35h8.21l-2,2h0l-1.24,1.23h0L27.69,30.35a1.35,1.35,0,0,0,1.9,1.91l11.57-11.6,3.21-3.2h0l.19-.18-.07,8.26a1.35,1.35,0,1,0,2.7,0l.07-8.74h0A4,4,0,0,0,46.08,13.93Z"
+                            style="fill:#fff;fill-rule:evenodd" />
+                        <path
+                            d="M38.46,31.23a1.26,1.26,0,0,0-1.26,1.26h0v11a1.34,1.34,0,0,1-.38.91h0a1.24,1.24,0,0,1-.85.34H16.54a1.34,1.34,0,0,1-.91-.38,1.29,1.29,0,0,1-.37-.91V24.07a1.29,1.29,0,0,1,.37-.91h0a1.33,1.33,0,0,1,.91-.37h10.9a1.26,1.26,0,0,0,0-2.52H16.54a3.78,3.78,0,0,0-2.69,1.16h0a3.78,3.78,0,0,0-1.11,2.68V43.45a3.8,3.8,0,0,0,3.8,3.8H36a3.74,3.74,0,0,0,2.6-1l.08-.08a3.77,3.77,0,0,0,1.12-2.68v-11a1.27,1.27,0,0,0-1.26-1.26Z"
+                            style="fill:#fff;fill-rule:evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="buttons">
+                <div style="cursor:pointer;" onclick="downloadPng()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                        <title>Download</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" />
+                                <path
+                                    d="M44.64,40.33a1.62,1.62,0,0,1,1.12-.46,1.59,1.59,0,0,1,1.59,1.58,5.6,5.6,0,0,1-5.6,5.6H18.25a5.6,5.6,0,0,1-5.6-5.6,1.59,1.59,0,0,1,1.59-1.58,1.62,1.62,0,0,1,1.12.46,1.58,1.58,0,0,1,.46,1.12,2.42,2.42,0,0,0,2.43,2.43h23.5a2.42,2.42,0,0,0,2.43-2.43,1.58,1.58,0,0,1,.46-1.12Zm-17.72-3-7.27-7.37a1.59,1.59,0,0,1,0-2.24,1.59,1.59,0,0,1,2.24,0l7.26,7.36a1,1,0,0,0,.35.23,1,1,0,0,0,.41.08,1,1,0,0,0,.42-.08,1,1,0,0,0,.35-.23l7.4-7.37a1.59,1.59,0,0,1,2.24,0,1.58,1.58,0,0,1,.46,1.12A1.56,1.56,0,0,1,40.33,30l-7.39,7.37a4.24,4.24,0,0,1-3,1.24,4.19,4.19,0,0,1-1.63-.32,4.45,4.45,0,0,1-1.38-.92Zm4.2-5.89a1.59,1.59,0,0,1-2.71-1.12V13.94a1.55,1.55,0,0,1,.47-1.12,1.57,1.57,0,0,1,2.24,0,1.55,1.55,0,0,1,.47,1.12V30.3a1.55,1.55,0,0,1-.47,1.12Z"
+                                    style="fill:#fff;pointer-events: none;" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
         </div>
 
-        <div class="buttons">
-          <div style="cursor:pointer;" onclick="downloadPng()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><title>Download</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0Z" class="svg-button" /><path d="M44.64,40.33a1.62,1.62,0,0,1,1.12-.46,1.59,1.59,0,0,1,1.59,1.58,5.6,5.6,0,0,1-5.6,5.6H18.25a5.6,5.6,0,0,1-5.6-5.6,1.59,1.59,0,0,1,1.59-1.58,1.62,1.62,0,0,1,1.12.46,1.58,1.58,0,0,1,.46,1.12,2.42,2.42,0,0,0,2.43,2.43h23.5a2.42,2.42,0,0,0,2.43-2.43,1.58,1.58,0,0,1,.46-1.12Zm-17.72-3-7.27-7.37a1.59,1.59,0,0,1,0-2.24,1.59,1.59,0,0,1,2.24,0l7.26,7.36a1,1,0,0,0,.35.23,1,1,0,0,0,.41.08,1,1,0,0,0,.42-.08,1,1,0,0,0,.35-.23l7.4-7.37a1.59,1.59,0,0,1,2.24,0,1.58,1.58,0,0,1,.46,1.12A1.56,1.56,0,0,1,40.33,30l-7.39,7.37a4.24,4.24,0,0,1-3,1.24,4.19,4.19,0,0,1-1.63-.32,4.45,4.45,0,0,1-1.38-.92Zm4.2-5.89a1.59,1.59,0,0,1-2.71-1.12V13.94a1.55,1.55,0,0,1,.47-1.12,1.57,1.57,0,0,1,2.24,0,1.55,1.55,0,0,1,.47,1.12V30.3a1.55,1.55,0,0,1-.47,1.12Z" style="fill:#fff;pointer-events: none;"/></g></g></svg>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="height:20px;"></div>
+        <div style="height:20px;"></div>
 
     </div>
     {{#unless modelObj.goals}}
     <form class="goal-form" action="/api/user/goals" method="post">
-        <h2>Agree To Your Eco-Challenge Goals For This Month</h2> <p>*You must select all 3 goals to proceed.</p>
+        <h2>Agree To Your Eco-Challenge Goals For This Month</h2>
+        <p>*You must select all 3 goals to proceed.</p>
 
         <input type="checkbox" id="goal1" name="goal1" value="Used a keep cup">
         <label for="goal1"> Used a keep cup</label><br>
@@ -147,8 +183,17 @@
 
 </div>
 
+<script src="/js/dashboard.js"></script>
+<script src="/js/progress.js"></script>
 {{/if}}
 
-<script src="../public/js/dashboard.js"></script>
-<script src="../public/js/progress.js"></script>
-<script src="../public/js/multiavatar.js"></script>
+{{!--
+<script src="/js/multiavatar.js"></script> --}}
+<script type="text/javascript" src="/js/multiavatar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/save-svg-as-png/1.4.17/saveSvgAsPng.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="/js/multiavatar2.js"></script>

@@ -49,10 +49,6 @@ const update3Text = () => {
   percentage3Tag.textContent = ruleOfThree(total, goal3Input) + "%";
 };
 
-
-$(window).on('load', updateBar1Length(), updateBar2Length(), updateBar3Length());
-$(window).on('load', update1Text(), update2Text(), update3Text());
-
 totalTag1.textContent = total;
 totalTag2.textContent = total;
 totalTag3.textContent = total;
@@ -60,3 +56,8 @@ totalTag3.textContent = total;
 percentage1Tag.textContent = ruleOfThree(total, goal1Input) + "%";
 percentage2Tag.textContent = ruleOfThree(total, goal2Input) + "%";
 percentage3Tag.textContent = ruleOfThree(total, goal3Input) + "%";
+
+// $(window).on('load', updateBar1Length(), updateBar2Length(), updateBar3Length());
+// $(window).on('load', update1Text(), update2Text(), update3Text());
+window.onload = updateBar1Length(), updateBar2Length(), updateBar3Length()
+window.onload = update1Text(), update2Text(), update3Text()
