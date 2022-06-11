@@ -208,3 +208,15 @@ button:hover {
         margin-right: 2%;
     }
 } */
+
+@media screen and (max-width:550px) {
+    .header-nav {
+        display: flex;
+        flex: 1;
+    }
+
+    .nav-link {
+        max-width:30%;
+        font-size: 15px;
+    }
+} 
